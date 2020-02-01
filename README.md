@@ -5,7 +5,7 @@ FCN+RL Handwritten Signature Segmentation model with refinement layers blocks.
 
 __Versões_dependencias__:
 
-Python 3.6
+Python 3.6\n
 numpy 1.17.4
 keras 2.3.1
 tensorflow-gpu 1.14.0
