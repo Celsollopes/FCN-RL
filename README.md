@@ -17,7 +17,7 @@ opencv-contrib-python 4.1.2.30
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-Execute o script abaixo para iniciar o reinamento do modelo FCN+RL.
+Execute o script abaixo para iniciar o treinamento do modelo FCN+RL.
 
 ### RUN sistema operacional WINDOWS:
 
