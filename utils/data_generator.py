@@ -1,13 +1,13 @@
-"""
-Gerador de dados - Gera os dados para treinamento e validação.
 
-"""
-#import dataaug # se invocado, cria o dataaumentation online durante o treino
+#import dataaug # if invoked, creates online data increase during training
 from utils.global_config import __CHANNEL, __DEF_WIDTH, __DEF_HEIGHT
 import numpy as np
 import cv2
 
 def generator_batch(fns, bs, validation=False, stroke=True):
+    """
+    Data generator - Generates data for training and validation.
+    """
     batches = []
     for i in range(0, len(fns), bs):
         batches.append(fns[i: i + bs])
@@ -37,8 +37,7 @@ def generator_batch(fns, bs, validation=False, stroke=True):
                   continue
                 
                 mask = cv2.resize(mask, (__DEF_WIDTH, __DEF_HEIGHT), interpolation=cv2.INTER_CUBIC)
-                # cv2.imwrite('/home/victormelo/playground/sanity/%s.png' % P.basename(fn), _img)
-                # cv2.imwrite('/home/victormelo/playground/sanity/%s-mask.png' % P.basename(fn), mask)
+                
                 '''
                 if not validation and not arguments['--no-aug']:
                     # _img = dataaug.invert_channel(_img)

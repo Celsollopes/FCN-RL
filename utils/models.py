@@ -1,16 +1,16 @@
 """
-Modelos Deep Learning.
-Armazena as funções de arquitetura dos modelos.
+Deep Learning models.
+Stores model architectural functions.
 """
 from keras.layers import Input, Conv2D, UpSampling2D, BatchNormalization, ZeroPadding2D, MaxPooling2D, Concatenate, Reshape, Lambda
 from utils.global_config import __CHANNEL, __DEF_HEIGHT, __DEF_WIDTH, INIT_CHANNELS
 from keras.layers import *
 from keras.models import Model
 
-def get_unet():
+def get_encoder_decoder():
     """
-    Modelo encoder-decoder totalmente convolucional - Treinamento para o primeiro estágio.
-    Rede baseada no modelo U-net.
+   Fully convolutional encoder-decoder model - Training for the first stage.
+    Network-based on the U-net model.
     """
     inputs = Input((__DEF_WIDTH, __DEF_HEIGHT, __CHANNEL))
 
@@ -68,18 +68,17 @@ def get_unet():
 
 def build_refinement(encoder_decoder):
     """
-   
-    A função build_refinement() representa o bloco das camadas de refinamento.
-    Ela recebe o modelo da rede enconder-decoder como parâmetro.
+    The build_refinement () function represents the block of the refinement layers.
+    It receives the model of the network hide-decoder as a parameter.
     
-    Recebe como entrada a imagem predita pelo modelo autoencoder concatenada com a imagem original cinza.
-    canais de entrada: imagem binaria e imagem original (in grayscale).
+    Receives the image predicted by the autoencoder model concatenated with the original gray image.
+    input channels: binary image and the original image (in grayscale).
     """
-    input_tensor = encoder_decoder.input # entrada da rede enconder-decoder
+    input_tensor = encoder_decoder.input # input of the enconder-decoder
     
     input = Lambda(lambda i: i[:, :, :, 0:3])(input_tensor)
 
-    conv_ref1 = Concatenate(axis=3)([input, encoder_decoder.output]) # concatenação das entrada+saida
+    conv_ref1 = Concatenate(axis=3)([input, encoder_decoder.output]) # input and output concatenation
     
     conv_ref2 = Conv2D(64, (3, 3), activation='relu', padding='same', kernel_initializer='he_normal', bias_initializer='zeros')(conv_ref1)
     conv_ref2 = BatchNormalization()(conv_ref2)
