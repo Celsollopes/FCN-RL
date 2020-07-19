@@ -18,10 +18,10 @@ opencv-contrib-python 4.1.2.30
 
 Execute o script abaixo para iniciar o treinamento do modelo FCN+RL.
 
-### RUN sistema operacional WINDOWS:
+### RUN WINDOWS:
 
-python fcn_plus_rl.py "-mrefinement_model" "--train-folder=<path_local_diretorio_de_treino>/" "--validation-folder=<path_local_diretorio_de_validacao>/" "--gpu=1" "--bs=2" "--train-steps=1" "--valid-steps=1" "--no-aug" "--train-samples=800" "--valid-samples=200" "--lr=0.0001"
+python fcn_plus_rl.py "-mrefinement_model" "--train-folder=<path_local_diretorio_de_treino>/" "--validation-folder=<path_local_diretorio_de_validacao>/" "--gpu=1" "--bs=12" "--train-steps=10" "--valid-steps=10" "--no-aug" "--train-samples=800" "--valid-samples=200" "--lr=0.0001"
 
-### RUN sistema operacional LINUX:
+### RUN LINUX:
 
-python fcn_plus_rl.py -mrefinement_model --train-folder=./train/ --validation-folder=./validation/ --gpu=1 --bs=2 --train-steps=1 --valid-steps=1 --no-aug --train-samples=800 --valid-samples=200 --lr=0.0001
+python fcn_plus_rl.py -mrefinement_model --train-folder=<path_local_diretorio_de_treino> --validation-folder=<path_local_diretorio_de_validacao> --gpu=1 --bs=12 --train-steps=10 --valid-steps=10 --no-aug --train-samples=800 --valid-samples=200 --lr=0.0001
