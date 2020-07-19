@@ -1,7 +1,6 @@
 ## FCN+RL: A Fully Convolutional Network followed by Refinement Layers to Offline Handwritten Signature Segmentation
 
 
-
 __Versões_dependencias__:
 
 Python 3.6
