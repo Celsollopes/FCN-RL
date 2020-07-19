@@ -16,7 +16,7 @@ opencv-contrib-python 4.1.2.30
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-Execute o script abaixo para iniciar o treinamento do modelo FCN+RL.
+Tran the FCN+RL model.
 
 ### RUN WINDOWS:
 
