@@ -1,6 +1,7 @@
 """
 Deep Learning models.
 Stores model architectural functions.
+
 """
 from keras.layers import Input, Conv2D, UpSampling2D, BatchNormalization, ZeroPadding2D, MaxPooling2D, Concatenate, Reshape, Lambda
 from utils.global_config import __CHANNEL, __DEF_HEIGHT, __DEF_WIDTH, INIT_CHANNELS
