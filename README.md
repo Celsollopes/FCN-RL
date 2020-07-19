@@ -1,5 +1,5 @@
 # FCN+RL
-FCN+RL Handwritten Signature Segmentation model with refinement layers blocks.
+### FCN+RL: A Fully Convolutional Network followed by Refinement Layers to Offline Handwritten Signature Segmentation
 
 
 
