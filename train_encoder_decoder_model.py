@@ -12,6 +12,7 @@ Options:
    --valid-samples NUMBER
    --lr FLOAT [default: 1e-5]
    --no-aug
+   
 """
 from keras.callbacks import EarlyStopping, ModelCheckpoint, CSVLogger, Callback
 from utils.global_config import __DEF_HEIGHT, __DEF_WIDTH, __CHANNEL
@@ -53,7 +54,7 @@ valid_fns = [k for k in valid_fns if '_gt' not in k]
 	
 def main(train_steps=10, valid_steps=10, train_samples, valid_samples, bs=12, train_fns, valid_fns):
     """
-    Load the parameters for training the refinement layer model.
+    Load the parameters for training the encoder-decoder layers model.
     """
 
     if train_samples:
@@ -76,20 +77,11 @@ def main(train_steps=10, valid_steps=10, train_samples, valid_samples, bs=12, tr
     monitor = 'val_loss'
     monitor_mode = 'min'
 	
-    # pretrain_path: local path of the encoder-decoder model pre-train in your machine.
-    pretrain_path = "./model_path_hdf/pretrain_autoencoder_model.hdf5"
-    encoder_decoder = keras.models.load_model(pretrain_path, custom_objects={'dice_coef_loss': dice_coef_loss, 'dice_coef': dice_coef})
-    encoder_decoder.load_weights(pretrain_path)
-
-    # freezes the weights of the encoder-decoder layers.
-    for layer in encoder_decoder.layers:
-            layer.trainable = False
-
-    model = build_refinement(encoder_decoder) # load the encoder-decoder model as a parameter for the refinement layers
+    model = get_encoder_decoder() # load the encoder-decoder model
     model.compile(optimizer=Adam(lr=float(arguments['--lr'])), loss=dice_coef_loss, metrics=[dice_coef])
     print(model.summary())
 
-    checkpoint_model = ModelCheckpoint('./FCN_RL_hdf/%s.hdf5' % arguments['--model'],
+    checkpoint_model = ModelCheckpoint('./FCN_encoder_decoder_hdf/%s.hdf5' % arguments['--model'],
                                      monitor=monitor, save_best_only=True,
                                      verbose=1, mode=monitor_mode,
                                      )
@@ -98,7 +90,7 @@ def main(train_steps=10, valid_steps=10, train_samples, valid_samples, bs=12, tr
         monitor=monitor, patience=30, verbose=1, mode=monitor_mode,
     ))
 
-    exitlog = CSVLogger('training-fcnrl.txt')
+    exitlog = CSVLogger('training-encoder_decoder.txt')
 
     train_gen = generator_batch(train_fns, bs=bs, stroke=False)
     valid_gen = generator_batch(valid_fns, bs=bs, validation=True)
