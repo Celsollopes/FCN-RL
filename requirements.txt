@@ -1,4 +1,6 @@
-numpy 1.17.4
 keras 2.3.1
+numpy 1.17.4
 tensorflow-gpu 1.14.0
 opencv-contrib-python 4.1.2.30
+
+tensorflow 2.2.0
