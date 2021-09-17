@@ -9,7 +9,7 @@ To learn more about this approach, go to the paper for this project [HERE](https
 _____________________________________________________________________________________________________________________________________________________________________
 If you use this code, please consider citing the following paper:
 
-* *Lopes Junior, Celso A. M. , Silva, Matheus H. M., Bezerra, Byron L. D., Fernandes, Bruno J. T. and Impedovo, Donato, "FCN+RL: A Fully Convolutional Network followed by Refinement Layers to Offline Handwritten Signature Segmentation," 2020 International Joint Conference on Neural Networks (IJCNN), 2020, pp. 1-7, https//doi:10.1109/IJCNN48605.2020.9206594.*
+* *Lopes Junior, Celso A. M. , Silva, Matheus H. M., Bezerra, Byron L. D., Fernandes, Bruno J. T. and Impedovo, Donato, "FCN+RL: A Fully Convolutional Network followed by Refinement Layers to Offline Handwritten Signature Segmentation," 2020 International Joint Conference on Neural Networks (IJCNN), 2020, pp. 1-7, https://doi.org/10.1109/IJCNN48605.2020.9206594.*
 _______________________________________________________________________________________________________________________________________________________________________
 ## Database:
 
