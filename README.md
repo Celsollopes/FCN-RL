@@ -12,6 +12,8 @@ If you use this code, please consider citing the following paper:
 * *Lopes Junior, Celso A. M. , Silva, Matheus H. M., Bezerra, Byron L. D., Fernandes, Bruno J. T. and Impedovo, Donato, "FCN+RL: A Fully Convolutional Network followed by Refinement Layers to Offline Handwritten Signature Segmentation," 2020 International Joint Conference on Neural Networks (IJCNN), 2020, pp. 1-7, https//doi:10.1109/IJCNN48605.2020.9206594.*
 _______________________________________________________________________________________________________________________________________________________________________
 ## Database:
+
+To use the Database you need to fill out a **License Agreement** as informed on the repository website.\
 We provide a database of complete identification documents [HERE](http://tc11.cvc.uab.es/datasets/SBR-Doc%20Database_1).\
 If you use this Database, please consider citing the following paper:
 
