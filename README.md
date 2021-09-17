@@ -9,7 +9,13 @@ To learn more about this approach, go to the paper for this project [HERE](https
 _____________________________________________________________________________________________________________________________________________________________________
 If you use this code, please consider citing the following paper:
 
-* Lopes Junior, Celso A. M. , Silva, Matheus H. M., Bezerra, Byron L. D., Fernandes, Bruno J. T. and Impedovo, Donato, "FCN+RL: A Fully Convolutional Network followed by Refinement Layers to Offline Handwritten Signature Segmentation," 2020 International Joint Conference on Neural Networks (IJCNN), 2020, pp. 1-7, doi: 10.1109/IJCNN48605.2020.9206594.
+* *Lopes Junior, Celso A. M. , Silva, Matheus H. M., Bezerra, Byron L. D., Fernandes, Bruno J. T. and Impedovo, Donato, "FCN+RL: A Fully Convolutional Network followed by Refinement Layers to Offline Handwritten Signature Segmentation," 2020 International Joint Conference on Neural Networks (IJCNN), 2020, pp. 1-7, https//doi:10.1109/IJCNN48605.2020.9206594.*
+_______________________________________________________________________________________________________________________________________________________________________
+## Database:
+We provide a database of complete identification documents [HERE](http://tc11.cvc.uab.es/datasets/SBR-Doc%20Database_1).\
+If you use this Database, please consider citing the following paper:
+
+* *LOPES JUNIOR, C. A. M., NEVES JUNIOR, R. B., BEZERRA, B. L. D., TOSELLI, A. H., IMPEDOVO, D.: Competition on components segmentation task of document photos. In: International Conference on Document Analysis and Recognition (ICDAR), pp. 1–15. Springer Nature, (2021). https://doi.org/10.1007/978-3-030-86337-1_45.*
 _______________________________________________________________________________________________________________________________________________________________________
 ## Dependencies:
 
